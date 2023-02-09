@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #box{
+        width: 300px;
+    }
+</style>
+<body onload="shivam()">
+    <input type="text" id="box" onkeyup="shiv()">
+
+</body>
+</html>
+<script>
+    let inputt=document.getElementById("box").value;
+    let store;
+    function shiv(){
+         store=localStorage.setItem("inp",document.getElementById("box").value)
+    }
+    function shivam(){
+        document.getElementById("box").value=localStorage.getItem("inp")
+    }
+</script>
